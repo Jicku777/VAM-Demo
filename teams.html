@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microsoft Teams Tutorial — Indian Central School Kuwait</title>
+<style>
+  :root{
+    --ink:#1b2a26;
+    --paper:#f6f4ee;
+    --moss:#6264A7;
+    --moss-deep:#16283f;
+    --gold:#c99a3d;
+    --line:#d8d2c4;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Georgia","Iowan Old Style",serif;
+    line-height:1.6;
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
+
+  header{
+    background:var(--moss-deep);
+    color:var(--paper);
+    padding:56px 24px 44px;
+  }
+  header .top{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    margin-bottom:20px;
+  }
+  header .top img{
+    width:88px;
+    height:88px;
+    border-radius:50%;
+    background:#fff;
+    padding:4px;
+  }
+  header .top .school-name{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:32px;
+    letter-spacing:.02em;
+    color:#dde5e0;
+  }
+  header h1{
+    font-size:clamp(32px,5.5vw,48px);
+    font-weight:400;
+    line-height:1.1;
+  }
+  header p{
+    margin-top:16px;
+    max-width:60ch;
+    font-size:16px;
+    color:#dde5e0;
+  }
+
+  nav.index{
+    background:#fff;
+    border-bottom:1px solid var(--line);
+    padding:18px 0;
+    position:sticky;
+    top:0;
+    z-index:10;
+  }
+  nav.index .wrap{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 18px;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:13px;
+  }
+  nav.index a{
+    color:var(--ink);
+    text-decoration:none;
+    cursor:pointer;
+  }
+  nav.index a:hover{color:var(--moss);}
+
+  main{padding:48px 0 64px;}
+
+  .module{
+    display:grid;
+    grid-template-columns:1fr 340px;
+    gap:32px;
+    border:1px solid var(--line);
+    background:#fff;
+    padding:28px;
+    margin-bottom:28px;
+    scroll-margin-top:70px;
+  }
+  .module .num{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:12px;
+    letter-spacing:.12em;
+    color:var(--moss);
+    text-transform:uppercase;
+    margin-bottom:6px;
+  }
+  .module h2{
+    font-size:22px;
+    font-weight:400;
+    margin-bottom:4px;
+  }
+  .module .module-tag{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:12px;
+    color:#7a7469;
+    margin-bottom:14px;
+  }
+  .module p{font-size:15px;margin-bottom:18px;}
+  .module .actions{display:flex;gap:10px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:13.5px;
+    text-decoration:none;
+    padding:11px 18px;
+    border-radius:2px;
+  }
+  .btn-outline{border:1px solid var(--moss);color:var(--moss);}
+  .btn-outline:hover{background:#f0efe8;}
+
+  .video-wrap{
+    background:#111;
+    border-radius:2px;
+    overflow:hidden;
+    align-self:start;
+  }
+  .video-wrap video{width:100%;display:block;background:#000;}
+
+  @media (max-width:760px){
+    .module{grid-template-columns:1fr;}
+  }
+
+  footer{
+    background:var(--moss-deep);
+    color:#c9d3ce;
+    padding:32px 24px;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:13px;
+  }
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;}
+  footer a{color:var(--gold);text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="top">
+      <img src="logo.png" alt="Indian Central School Kuwait logo">
+      <span class="school-name">Indian Central School Kuwait</span>
+    </div>
+    <h1>Microsoft Teams Tutorial</h1>
+    <p>Setting up your class team and organising class meetings in Microsoft Teams. Watch the video or open the written guide for each module.</p>
+    <p style="margin-top:14px;"><a href="index.html" style="color:var(--gold);font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;">&larr; Back to all tutorials</a></p>
+  </div>
+</header>
+
+<nav class="index">
+  <div class="wrap">
+    <a onclick="document.getElementById('teams').scrollIntoView({behavior:'smooth'})">1. Class Setup</a>
+    <a onclick="document.getElementById('teams-meeting').scrollIntoView({behavior:'smooth'})">2. Organising a Meeting</a>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+
+    <div class="module" id="teams">
+      <div>
+        <div class="num">Setting Up Your Class Team</div>
+        <h2>Adding Students and Subjects to a Class Team</h2>
+        <div class="module-tag">Class Teacher</div>
+        <p>Once the admin has assigned you as the owner of your class team, add all students of that class as members (searchable by admission number), then set up each subject as its own channel within the team.</p>
+        <div class="actions">
+          <a class="btn btn-outline" href="guides/MS_Teams_Class_Setup_Guide.pdf" target="_blank">Read the guide (PDF)</a>
+        </div>
+      </div>
+      <div class="video-wrap">
+        <video controls preload="none">
+          <source src="videos/MS_Teams_Class_Setup.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="module" id="teams-meeting">
+      <div>
+        <div class="num">Organising a Class Meeting</div>
+        <h2>Scheduling and Configuring an Online Class Meeting</h2>
+        <div class="module-tag">Class / Subject Teacher</div>
+        <p>Schedule a meeting directly inside your class channel, add subject teachers as co-organizers, and set the recommended lobby, presenter, and participation options for a classroom setting.</p>
+        <div class="actions">
+          <a class="btn btn-outline" href="guides/MS_Teams_Meeting_Guide.pdf" target="_blank">Read the guide (PDF)</a>
+        </div>
+      </div>
+      <div class="video-wrap">
+        <video controls preload="none">
+          <source src="videos/MS_Teams_Meeting_Setup.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Microsoft Teams Tutorial</span>
+    <span>Questions?<br>Please Contact: Jicku Philip, VAM Coordinator &nbsp;•&nbsp; 55480070</span>
+  </div>
+</footer>
+
+</body>
+</html>

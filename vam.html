@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VAM — Teacher Quick-Start Guides</title>
+<style>
+  :root{
+    --ink:#1b2a26;
+    --paper:#f6f4ee;
+    --moss:#2c5282;
+    --moss-deep:#16283f;
+    --gold:#c99a3d;
+    --line:#d8d2c4;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Georgia","Iowan Old Style",serif;
+    line-height:1.6;
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
+
+  header{
+    background:var(--moss-deep);
+    color:var(--paper);
+    padding:56px 24px 44px;
+  }
+  header .eyebrow{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:14px;
+  }
+  header .top{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    margin-bottom:20px;
+  }
+  header .top img{
+    width:88px;
+    height:88px;
+    border-radius:50%;
+    background:#fff;
+    padding:4px;
+  }
+  header .top .school-name{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:32px;
+    letter-spacing:.02em;
+    color:#dde5e0;
+  }
+  header h1{
+    font-size:clamp(32px,5.5vw,48px);
+    font-weight:400;
+    line-height:1.1;
+  }
+  header p{
+    margin-top:16px;
+    max-width:60ch;
+    font-size:16px;
+    color:#dde5e0;
+  }
+
+  nav.index{
+    background:#fff;
+    border-bottom:1px solid var(--line);
+    padding:18px 0;
+    position:sticky;
+    top:0;
+    z-index:10;
+  }
+  nav.index .wrap{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 18px;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:13px;
+  }
+  nav.index a{
+    color:var(--ink);
+    text-decoration:none;
+    cursor:pointer;
+  }
+  nav.index a:hover{color:var(--moss);}
+
+  main{padding:48px 0 64px;}
+
+  .module{
+    display:grid;
+    grid-template-columns:1fr 340px;
+    gap:32px;
+    border:1px solid var(--line);
+    background:#fff;
+    padding:28px;
+    margin-bottom:28px;
+    scroll-margin-top:70px;
+  }
+  .module .num{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:12px;
+    letter-spacing:.12em;
+    color:var(--gold);
+    text-transform:uppercase;
+    margin-bottom:6px;
+  }
+  .module h2{
+    font-size:22px;
+    font-weight:400;
+    margin-bottom:4px;
+  }
+  .module .module-tag{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:12px;
+    color:#7a7469;
+    margin-bottom:14px;
+  }
+  .module p{font-size:15px;margin-bottom:18px;}
+  .module .actions{display:flex;gap:10px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:13.5px;
+    text-decoration:none;
+    padding:11px 18px;
+    border-radius:2px;
+  }
+  .btn-primary{background:var(--moss);color:#fff;}
+  .btn-primary:hover{background:var(--moss-deep);}
+  .btn-outline{border:1px solid var(--moss);color:var(--moss);}
+  .btn-outline:hover{background:#f0efe8;}
+
+  .video-wrap{
+    background:#111;
+    border-radius:2px;
+    overflow:hidden;
+    align-self:start;
+  }
+  .video-wrap video{width:100%;display:block;background:#000;}
+
+  .section-divider{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin:44px 0 28px;
+  }
+  .section-divider-line{
+    flex:1;
+    height:1px;
+    background:var(--line);
+  }
+  .section-divider-label{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:13px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:#6264A7;
+    white-space:nowrap;
+  }
+
+  @media (max-width:760px){
+    .module{grid-template-columns:1fr;}
+  }
+
+  footer{
+    background:var(--moss-deep);
+    color:#c9d3ce;
+    padding:32px 24px;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:13px;
+  }
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;}
+  footer a{color:var(--gold);text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="top">
+      <img src="logo.png" alt="Indian Central School Kuwait logo">
+      <span class="school-name">Indian Central School Kuwait</span>
+    </div>
+    <h1>VAM Tutorial</h1>
+    <p>A set of quick-reference guides covering the day-to-day tasks you will use most in VAM — attendance, marks, fees, behaviour records, and more. Watch the video or open the written guide for each module.</p>
+    <p style="margin-top:14px;"><a href="index.html" style="color:var(--gold);font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;">&larr; Back to all tutorials</a></p>
+  </div>
+</header>
+
+<nav class="index">
+  <div class="wrap">
+    <a onclick="document.getElementById('profile').scrollIntoView({behavior:'smooth'})">1. Student Profile</a>
+    <a onclick="document.getElementById('electives').scrollIntoView({behavior:'smooth'})">2. Student Elective</a>
+    <a onclick="document.getElementById('marks').scrollIntoView({behavior:'smooth'})">3. Mark Entry</a>
+    <a onclick="document.getElementById('behaviour').scrollIntoView({behavior:'smooth'})">4. Student Behaviour</a>
+    <a onclick="document.getElementById('fees').scrollIntoView({behavior:'smooth'})">5. Fee Defaulter</a>
+    <a onclick="document.getElementById('attendance').scrollIntoView({behavior:'smooth'})">6. Attendance</a>
+    <a onclick="document.getElementById('timetable').scrollIntoView({behavior:'smooth'})">7. Timetable &amp; Notes</a>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+
+    <div class="module" id="profile">
+      <div>
+        <div class="num">Module 1 · Registration Management</div>
+        <h2>How to View and Update a Student Profile</h2>
+        <div class="module-tag">Class Teacher</div>
+        <p>Update a student's profile (using the address section as an example) — navigate to Registration Management, open a record, edit, and save.</p>
+        <div class="actions">
+          <a class="btn btn-outline" href="guides/Student_Profile_Updation_Guide.pdf" target="_blank">Read the guide (PDF)</a>
+        </div>
+      </div>
+      <div class="video-wrap">
+        <video controls preload="none">
+          <source src="videos/Student_Profile_Updation.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="module" id="electives">
+      <div>
+        <div class="num">Module 2 · Class Management</div>
+        <h2>How to Select Student Electives</h2>
+        <div class="module-tag">Class Teacher</div>
+        <p>Assign elective subjects (such as Moral Science or Islamic Culture) to students in your class — from the Dashboard through to a saved confirmation.</p>
+        <div class="actions">
+          <a class="btn btn-outline" href="guides/Elective.pdf" target="_blank">Read the guide (PDF)</a>
+        </div>
+      </div>
+      <div class="video-wrap">
+        <video controls preload="none" poster="">
+          <source src="videos/Elective.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="module" id="marks">
+      <div>
+        <div class="num">Module 3 · Exam Management</div>
+        <h2>Mark Entry &amp; Holistic Card Entry</h2>
+        <div class="module-tag">Subject / Class Teacher</div>
+        <p>Enter marks for the classes and subjects assigned to you, and complete Holistic Card Entry for your students.</p>
+        <div class="actions">
+          <a class="btn btn-outline" href="guides/Mark_Entry_Guide.pdf" target="_blank">Read the guide (PDF)</a>
+        </div>
+      </div>
+      <div class="video-wrap">
+        <video controls preload="none">
+          <source src="videos/Mark_Entry.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="module" id="behaviour">
+      <div>
+        <div class="num">Module 4 · Behavior and Disciplinary</div>
+        <h2>How to Update Student Behaviour</h2>
+        <div class="module-tag">Class Teacher</div>
+        <p>Record behaviour remarks for students in your class — select a class and division, enter remarks per student, and save.</p>
+        <div class="actions">
+          <a class="btn btn-outline" href="guides/Student_Behaviour_Guide.pdf" target="_blank">Read the guide (PDF)</a>
+        </div>
+      </div>
+      <div class="video-wrap">
+        <video controls preload="none">
+          <source src="videos/Student_Behaviour.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="module" id="fees">
+      <div>
+        <div class="num">Module 5 · Fee Details</div>
+        <h2>How to View the Fee Defaulter Report</h2>
+        <div class="module-tag">Class Teacher</div>
+        <p>View the report listing students with outstanding or defaulted fee payments, and use the search filters to narrow results.</p>
+        <div class="actions">
+          <a class="btn btn-outline" href="guides/Fee_Defaulter_Report_Guide.pdf" target="_blank">Read the guide (PDF)</a>
+        </div>
+      </div>
+      <div class="video-wrap">
+        <video controls preload="none">
+          <source src="videos/Fee_Defaulter_View.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="module" id="attendance">
+      <div>
+        <div class="num">Module 6 · LMS → Attendance Management</div>
+        <h2>How to Mark Student Attendance</h2>
+        <div class="module-tag">Class Teacher</div>
+        <p>Mark daily attendance in the LMS portal — open Student Attendance, select the class and division, mark absentees, and save.</p>
+        <div class="actions">
+          <a class="btn btn-outline" href="guides/LMS_Student_Attendance_Guide.pdf" target="_blank">Read the guide (PDF)</a>
+        </div>
+      </div>
+      <div class="video-wrap">
+        <video controls preload="none">
+          <source src="videos/LMS_Student_Attendance_Marking.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="module" id="timetable">
+      <div>
+        <div class="num">Module 7 · LMS → Timetable &amp; Teacher Notes</div>
+        <h2>Update Your Timetable and Teacher Notes</h2>
+        <div class="module-tag">All Teachers</div>
+        <p>Update your personal teaching timetable first, then upload Teacher Notes (Classwork, Homework, Project, Assignment, or Diary) — the timetable determines which classes appear for notes.</p>
+        <div class="actions">
+          <a class="btn btn-outline" href="guides/Timetable_Teacher_Notes_Guide.pdf" target="_blank">Read the guide (PDF)</a>
+        </div>
+      </div>
+      <div class="video-wrap">
+        <video controls preload="none">
+          <source src="videos/Timtable_Teacher_Note_Guide.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>VAM Teacher Guides</span>
+    <span>Questions?<br>Please Contact: Jicku Philip, VAM Coordinator &nbsp;•&nbsp; 55480070</span>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- rebuild trigger -->

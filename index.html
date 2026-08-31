@@ -8,8 +8,8 @@
   :root{
     --ink:#1b2a26;
     --paper:#f6f4ee;
-    --moss:#2f5d50;
-    --moss-deep:#1e3d34;
+    --moss:#2c5282;
+    --moss-deep:#16283f;
     --gold:#c99a3d;
     --line:#d8d2c4;
   }
@@ -34,6 +34,25 @@
     text-transform:uppercase;
     color:var(--gold);
     margin-bottom:14px;
+  }
+  header .top{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    margin-bottom:20px;
+  }
+  header .top img{
+    width:88px;
+    height:88px;
+    border-radius:50%;
+    background:#fff;
+    padding:4px;
+  }
+  header .top .school-name{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:32px;
+    letter-spacing:.02em;
+    color:#dde5e0;
   }
   header h1{
     font-size:clamp(32px,5.5vw,48px);
@@ -63,11 +82,11 @@
     font-size:13px;
   }
   nav.index a{
-    color:var(--moss);
+    color:var(--ink);
     text-decoration:none;
-    border-bottom:1px solid transparent;
+    cursor:pointer;
   }
-  nav.index a:hover{border-bottom-color:var(--moss);}
+  nav.index a:hover{color:var(--moss);}
 
   main{padding:48px 0 64px;}
 
@@ -142,30 +161,49 @@
 
 <header>
   <div class="wrap">
-    <div class="eyebrow">Software Demonstration</div>
-    <h1>VAM — Teacher Quick-Start Guides</h1>
-    <p>Seven short walkthroughs covering the day-to-day tasks you'll use most — attendance, marks, fees, behaviour records, and more. Watch the video or open the written guide for each.</p>
+    <div class="top">
+      <span class="school-name">Indian Central School Kuwait</span>
+    </div>
+    <h1>Software Demonstration on VAM</h1>
+    <p>A set of quick-reference guides covering the day-to-day tasks you will use most in VAM — attendance, marks, fees, behaviour records, and more. Watch the video or open the written guide for each module.</p>
   </div>
 </header>
 
 <nav class="index">
   <div class="wrap">
-    <a href="#electives">1. Student Electives</a>
-    <a href="#attendance">2. Attendance (LMS)</a>
-    <a href="#marks">3. Mark Entry</a>
-    <a href="#behaviour">4. Student Behaviour</a>
-    <a href="#profile">5. Student Profile</a>
-    <a href="#fees">6. Fee Defaulter Report</a>
-    <a href="#timetable">7. Timetable &amp; Notes</a>
+    <a onclick="document.getElementById('profile').scrollIntoView({behavior:'smooth'})">1. Student Profile</a>
+    <a onclick="document.getElementById('electives').scrollIntoView({behavior:'smooth'})">2. Student Elective</a>
+    <a onclick="document.getElementById('marks').scrollIntoView({behavior:'smooth'})">3. Mark Entry</a>
+    <a onclick="document.getElementById('behaviour').scrollIntoView({behavior:'smooth'})">4. Student Behaviour</a>
+    <a onclick="document.getElementById('fees').scrollIntoView({behavior:'smooth'})">5. Fee Defaulter</a>
+    <a onclick="document.getElementById('attendance').scrollIntoView({behavior:'smooth'})">6. Attendance</a>
+    <a onclick="document.getElementById('timetable').scrollIntoView({behavior:'smooth'})">7. Timetable &amp; Notes</a>
   </div>
 </nav>
 
 <main>
   <div class="wrap">
 
+    <div class="module" id="profile">
+      <div>
+        <div class="num">Module 1 · Registration Management</div>
+        <h2>How to View and Update a Student Profile</h2>
+        <div class="module-tag">Class Teacher</div>
+        <p>Update a student's profile (using the address section as an example) — navigate to Registration Management, open a record, edit, and save.</p>
+        <div class="actions">
+          <a class="btn btn-outline" href="guides/Student_Profile_Updation_Guide.pdf" target="_blank">Read the guide (PDF)</a>
+        </div>
+      </div>
+      <div class="video-wrap">
+        <video controls preload="none">
+          <source src="videos/Student_Profile_Updation.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
     <div class="module" id="electives">
       <div>
-        <div class="num">Module 1 · Class Management</div>
+        <div class="num">Module 2 · Class Management</div>
         <h2>How to Select Student Electives</h2>
         <div class="module-tag">Class Teacher</div>
         <p>Assign elective subjects (such as Moral Science or Islamic Culture) to students in your class — from the Dashboard through to a saved confirmation.</p>
@@ -176,23 +214,6 @@
       <div class="video-wrap">
         <video controls preload="none" poster="">
           <source src="videos/Elective.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-
-    <div class="module" id="attendance">
-      <div>
-        <div class="num">Module 2 · LMS → Attendance Management</div>
-        <h2>How to Mark Student Attendance</h2>
-        <div class="module-tag">Class Teacher</div>
-        <p>Mark daily attendance in the LMS portal — open Student Attendance, select the class and division, mark absentees, and save.</p>
-        <div class="actions">
-          <a class="btn btn-outline" href="guides/LMS_Student_Attendance_Guide.pdf" target="_blank">Read the guide (PDF)</a>
-        </div>
-      </div>
-      <div class="video-wrap">
-        <video controls preload="none">
-          <source src="videos/LMS_Student_Attendance_Marking.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -231,26 +252,9 @@
       </div>
     </div>
 
-    <div class="module" id="profile">
-      <div>
-        <div class="num">Module 5 · Registration Management</div>
-        <h2>How to View and Update a Student Profile</h2>
-        <div class="module-tag">Class Teacher</div>
-        <p>Update a student's profile (using the address section as an example) — navigate to Registration Management, open a record, edit, and save.</p>
-        <div class="actions">
-          <a class="btn btn-outline" href="guides/Student_Profile_Updation_Guide.pdf" target="_blank">Read the guide (PDF)</a>
-        </div>
-      </div>
-      <div class="video-wrap">
-        <video controls preload="none">
-          <source src="videos/Student_Profile_Updation.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-
     <div class="module" id="fees">
       <div>
-        <div class="num">Module 6 · Fee Details</div>
+        <div class="num">Module 5 · Fee Details</div>
         <h2>How to View the Fee Defaulter Report</h2>
         <div class="module-tag">Class Teacher</div>
         <p>View the report listing students with outstanding or defaulted fee payments, and use the search filters to narrow results.</p>
@@ -261,6 +265,23 @@
       <div class="video-wrap">
         <video controls preload="none">
           <source src="videos/Fee_Defaulter_View.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="module" id="attendance">
+      <div>
+        <div class="num">Module 6 · LMS → Attendance Management</div>
+        <h2>How to Mark Student Attendance</h2>
+        <div class="module-tag">Class Teacher</div>
+        <p>Mark daily attendance in the LMS portal — open Student Attendance, select the class and division, mark absentees, and save.</p>
+        <div class="actions">
+          <a class="btn btn-outline" href="guides/LMS_Student_Attendance_Guide.pdf" target="_blank">Read the guide (PDF)</a>
+        </div>
+      </div>
+      <div class="video-wrap">
+        <video controls preload="none">
+          <source src="videos/LMS_Student_Attendance_Marking.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -288,7 +309,7 @@
 <footer>
   <div class="wrap">
     <span>VAM Teacher Guides</span>
-    <span>Questions? <a href="mailto:REPLACE_WITH_EMAIL">REPLACE_WITH_EMAIL</a></span>
+    <span>Questions?<br>Please Contact: Jicku Philip, VAM Coordinator &nbsp;•&nbsp; 55480070</span>
   </div>
 </footer>
 

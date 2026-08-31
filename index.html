@@ -142,6 +142,26 @@
   }
   .video-wrap video{width:100%;display:block;background:#000;}
 
+  .section-divider{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin:44px 0 28px;
+  }
+  .section-divider-line{
+    flex:1;
+    height:1px;
+    background:var(--line);
+  }
+  .section-divider-label{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:13px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:#6264A7;
+    white-space:nowrap;
+  }
+
   @media (max-width:760px){
     .module{grid-template-columns:1fr;}
   }
@@ -179,6 +199,8 @@
     <a onclick="document.getElementById('fees').scrollIntoView({behavior:'smooth'})">5. Fee Defaulter</a>
     <a onclick="document.getElementById('attendance').scrollIntoView({behavior:'smooth'})">6. Attendance</a>
     <a onclick="document.getElementById('timetable').scrollIntoView({behavior:'smooth'})">7. Timetable &amp; Notes</a>
+    <span style="color:#d8d2c4;">|</span>
+    <a onclick="document.getElementById('teams').scrollIntoView({behavior:'smooth'})">Microsoft Teams Tutorial</a>
   </div>
 </nav>
 
@@ -300,6 +322,29 @@
       <div class="video-wrap">
         <video controls preload="none">
           <source src="videos/Timtable_Teacher_Note_Guide.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Microsoft Teams Tutorial</div>
+      <div class="section-divider-line"></div>
+    </div>
+
+    <div class="module" id="teams">
+      <div>
+        <div class="num" style="color:#6264A7;">Setting Up Your Class Team</div>
+        <h2>Adding Students and Subjects to a Class Team</h2>
+        <div class="module-tag">Class Teacher</div>
+        <p>Once the admin has assigned you as the owner of your class team, add all students of that class as members (searchable by admission number), then set up each subject as its own channel within the team.</p>
+        <div class="actions">
+          <a class="btn btn-outline" href="guides/MS_Teams_Class_Setup_Guide.pdf" target="_blank">Read the guide (PDF)</a>
+        </div>
+      </div>
+      <div class="video-wrap">
+        <video controls preload="none">
+          <source src="videos/MS_Teams_Class_Setup.mp4" type="video/mp4">
         </video>
       </div>
     </div>
